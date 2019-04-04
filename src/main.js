@@ -6,6 +6,7 @@ import router from './router';
 import store from './store/store'
 import bus from './utils/bus'
 import 'element-ui/lib/theme-chalk/display.css';
+import '@/styles/index.less';
 import { getRequest, postRequest } from './utils/request'
 import {
   Container,
