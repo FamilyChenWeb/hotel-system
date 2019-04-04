@@ -1,37 +1,36 @@
 <template>
-  <div class="menu">
-    <el-menu
-      :default-active="currentPath"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-      background-color="#41474F"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :collapse="isCollapse"
-      router
-    >
-      <template v-for="(item, index) in menu">
-        <el-menu-item  v-if="item.hidden" :index="item.componentName" :key="item.id">
+  <el-menu
+    :default-active="currentPath"
+    class="el-menu-vertical-demo"
+    @open="handleOpen"
+    @close="handleClose"
+    background-color="#304156"
+    text-color="#BFCBD9"
+    active-text-color="#409EFF"
+    :collapse="isCollapse"
+    router
+  >
+    <!--<div style="text-align: center;">LOGO</div>-->
+    <template v-for="(item, index) in menu">
+      <el-menu-item  v-if="item.hidden" :index="item.componentName" :key="item.id">
+        <i :class="item.icon"></i>
+        <span slot="title">{{item.name}}</span>
+      </el-menu-item>
+      <el-submenu v-else :index="item.id" :key="item.id">
+        <template slot="title">
           <i :class="item.icon"></i>
-          <span slot="title">{{item.name}}</span>
+          <span>{{item.name}}</span>
+        </template>
+        <el-menu-item v-if="typeof item1.shield == 'undefined'" :index="item1.componentName" v-for="(item1, index1) in item.sub" :key="item1.id">
+          {{item1.name}}
         </el-menu-item>
-        <el-submenu v-else :index="item.id" :key="item.id">
-          <template slot="title">
-            <i :class="item.icon"></i>
-            <span>{{item.name}}</span>
-          </template>
-          <el-menu-item v-if="typeof item1.shield == 'undefined'" :index="item1.componentName" v-for="(item1, index1) in item.sub" :key="item1.id">
-            {{item1.name}}
-          </el-menu-item>
-          <el-submenu v-else index="1-4">
-            <template slot="title">{{item1.name}}</template>
-            <el-menu-item v-for="(item2, index2) in item1.grandson" :index="item2.componentName" :key="item2.id">{{item2.name}}</el-menu-item>
-          </el-submenu>
+        <el-submenu v-else index="1-4">
+          <template slot="title">{{item1.name}}</template>
+          <el-menu-item v-for="(item2, index2) in item1.grandson" :index="item2.componentName" :key="item2.id">{{item2.name}}</el-menu-item>
         </el-submenu>
-      </template>
-    </el-menu>
-  </div>
+      </el-submenu>
+    </template>
+  </el-menu>
 </template>
 
 <script>
@@ -68,14 +67,21 @@ export default {
 </script>
 
 <style scoped lang="less">
-  .menu {
+  @import '../styles/theme';
+  .el-menu {
+    border: 0;
     height: 100%;
-    .el-menu {
-      border: 0;
-      height: 100%;
-    }
-    .el-menu-vertical-demo:not(.el-menu--collapse) {
-      width: 200px;
-    }
+  }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+  }
+  .el-submenu__title i {
+    color: @viceMenuBgIcon;
+  }
+  .el-menu-item {
+    background-color: @viceMenuBg !important;
+  }
+  .el-menu-item:hover {
+    background-color: @viceMenuBgHover !important;
   }
 </style>

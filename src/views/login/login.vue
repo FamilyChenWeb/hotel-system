@@ -41,8 +41,8 @@
         <el-button type="primary" @click="login_btn">登录</el-button>
       </div>
       <p class="login_flex">
-        <a href="#">忘记密码</a>
-        <a href="#">注册账号</a>
+        <a href="">忘记密码</a>
+        <a href="">注册账号</a>
       </p>
     </div>
   </div>
@@ -113,13 +113,14 @@ export default {
 </script>
 
 <style scoped lang="less">
+  @import '../../styles/theme.less';
   .login_box {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #303133;
+    background-color: @loginBg;
     .login_border {
       width: 100%;
       max-width: 500px;
@@ -156,6 +157,10 @@ export default {
       .login_flex {
         display: flex;
         justify-content: space-between;
+        padding: 15px 0;
+        a {
+          color: #fff;
+        }
       }
     }
   }

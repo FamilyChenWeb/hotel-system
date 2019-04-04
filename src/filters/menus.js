@@ -1,11 +1,11 @@
 module.exports = [
-  /*{
+  {
     id: '0',
     name: '首页',
     icon: 'el-icon-more',
     componentName: '/home',
     hidden: true
-  },*/
+  },
   {
     id: '1',
     icon: 'el-icon-menu',

@@ -7,6 +7,7 @@ import store from './store/store'
 import bus from './utils/bus'
 import 'element-ui/lib/theme-chalk/display.css';
 import '@/styles/index.less';
+import '@/styles/myElement.less';
 import { getRequest, postRequest } from './utils/request'
 import {
   Container,
@@ -20,6 +21,7 @@ import {
   menuItemGroup,
   Input,
   button,
+  Scrollbar,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -33,6 +35,7 @@ Vue.component(Submenu.name, Submenu);
 Vue.component(menuItemGroup.name, menuItemGroup);
 Vue.component(Input.name, Input);
 Vue.component(button.name, button);
+Vue.component(Scrollbar.name, Scrollbar);
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 
