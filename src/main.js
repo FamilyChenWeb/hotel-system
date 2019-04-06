@@ -27,6 +27,14 @@ import {
   DropdownItem,
   Breadcrumb,
   breadcrumbItem,
+  Table,
+  TableColumn,
+  Pagination,
+  Dialog,
+  Form,
+  FormItem,
+  Select,
+  Option,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -46,6 +54,14 @@ Vue.component(DropdownMenu.name, DropdownMenu);
 Vue.component(DropdownItem.name, DropdownItem);
 Vue.component(Breadcrumb.name, Breadcrumb);
 Vue.component(breadcrumbItem.name, breadcrumbItem);
+Vue.component(Table.name, Table);
+Vue.component(TableColumn.name, TableColumn);
+Vue.component(Pagination.name, Pagination);
+Vue.component(Dialog.name, Dialog);
+Vue.component(Form.name, Form);
+Vue.component(FormItem.name, FormItem);
+Vue.component(Select.name, Select);
+Vue.component(Option.name, Option);
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 
