@@ -22,6 +22,11 @@ import {
   Input,
   button,
   Scrollbar,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Breadcrumb,
+  breadcrumbItem,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -36,6 +41,11 @@ Vue.component(menuItemGroup.name, menuItemGroup);
 Vue.component(Input.name, Input);
 Vue.component(button.name, button);
 Vue.component(Scrollbar.name, Scrollbar);
+Vue.component(Dropdown.name, Dropdown);
+Vue.component(DropdownMenu.name, DropdownMenu);
+Vue.component(DropdownItem.name, DropdownItem);
+Vue.component(Breadcrumb.name, Breadcrumb);
+Vue.component(breadcrumbItem.name, breadcrumbItem);
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 

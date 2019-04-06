@@ -1,6 +1,20 @@
 <template>
   <div class="home">
-    home
+    <p>homehomehomehomehomehomehomehomehomehmehomehomehomehomehomehomehomehomehomehome</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
+    <p>home</p>
   </div>
 </template>
 
