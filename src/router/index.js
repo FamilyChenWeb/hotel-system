@@ -16,7 +16,7 @@ export default new Router({
     {
       path: '/login',
       component: Login,
-      name: 'login'
+      name: '登录'
     },
     {
       path: '/404',
@@ -37,15 +37,18 @@ export default new Router({
       children: [
         {
           path: '/home',
-          component: Home
+          component: Home,
+          name: '首页'
         },
         {
           path: '/index1',
-          component: index1
+          component: index1,
+          name: 'index1'
         },
         {
           path: '/index2',
-          component: index2
+          component: index2,
+          name: 'index2'
         },
       ]
     },

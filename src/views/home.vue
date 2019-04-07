@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <el-button type="primary">添加</el-button>
-    <el-button type="primary">删除</el-button>
+    <div class="home_but">
+      <el-button type="primary" @click="homeAdd">添加</el-button>
+      <el-button type="primary">删除</el-button>
+    </div>
     <el-table
       ref="multipleTable"
       :data="tableData"
@@ -53,12 +55,12 @@
         :total="400">
       </el-pagination>
     </div>
-    <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
+    <el-dialog title="添加信息" :visible.sync="dialogFormVisible">
       <el-form :model="form">
         <el-form-item label="活动名称" :label-width="formLabelWidth">
           <el-input v-model="form.name" autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="活动区域" :label-width="formLabelWidth">
+        <el-form-item label="选择" :label-width="formLabelWidth">
           <el-select v-model="form.region" placeholder="请选择活动区域">
             <el-option label="区域一" value="shanghai"></el-option>
             <el-option label="区域二" value="beijing"></el-option>
@@ -110,7 +112,7 @@ export default {
       multipleSelection: [],
       currentPage4: 4,
       formLabelWidth: '120px',
-      dialogFormVisible: true,
+      dialogFormVisible: false,
       form: {
         name: '',
         region: '',
@@ -124,6 +126,9 @@ export default {
     }
   },
   methods: {
+    homeAdd () {
+      this.dialogFormVisible = true;
+    },
     toggleSelection(rows) {
       if (rows) {
         rows.forEach(row => {
@@ -149,8 +154,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .home {
     background-color: #fff;
+    padding: 0 15px;
+    .home_but, .block {
+      padding: 15px 0;
+    }
   }
 </style>

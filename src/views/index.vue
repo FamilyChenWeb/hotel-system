@@ -46,5 +46,6 @@ export default {
   .el-main { //内容样式
     background-color: @background;
     color: @mainColor;
+    padding: 15px;
   }
 </style>
