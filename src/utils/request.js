@@ -8,7 +8,8 @@ let base = Api.base;
 axios.defaults.baseURL = process.env.API_HOST;
 // axios.defaults.withCredentials = true;
 
-axios.interceptors.request.use(config => {
+axios.interceptors.request.use(
+  config => {
     if (store.state.token) {
       config.headers.Authorization = `token ${store.state.token}`;
     }

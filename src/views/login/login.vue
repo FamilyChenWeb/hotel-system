@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import * as types from '../../store/types'
 import { login } from '../../api/api'
 export default {
   name: 'login',
@@ -67,7 +68,7 @@ export default {
       this.$getRequest( `${login}?key=${this.key}&phone=${this.account}&passwd=${this.password}` ).then(res => {
         if (res.data.code === 200 && res.data.msg === '成功!') {
           console.log(`登录成功`)
-          // this.$store.commit('set_token', res.data.data.key);
+          this.$store.commit(types.LOGIN, res.data.data.key);
           this.$router.push('/');
         } else {
           this.$router.replace('/login')

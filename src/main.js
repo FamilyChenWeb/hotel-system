@@ -5,6 +5,7 @@ import App from './App';
 import router from './router';
 import store from './store/store'
 import bus from './utils/bus'
+import './intercept'
 import 'element-ui/lib/theme-chalk/display.css';
 import '@/styles/index.less';
 import '@/styles/myElement.less';
