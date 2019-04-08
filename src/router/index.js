@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/home'
 import Login from '@/views/login/login'
 import err from '@/views/404'
+import Home from '@/views/home'
+import Privilege from '@/views/privilege/privilege'
 
 import Index from '@/views/index'
 import index1 from '@/views/index1'
@@ -39,6 +40,11 @@ export default new Router({
           path: '/home',
           component: Home,
           name: '首页'
+        },
+        {
+          path: '/privilege',
+          component: Privilege,
+          name: '权限管理'
         },
         {
           path: '/index1',

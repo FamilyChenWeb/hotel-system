@@ -35,6 +35,8 @@ import {
   FormItem,
   Select,
   Option,
+  Row,
+  Col,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -62,6 +64,8 @@ Vue.component(Form.name, Form);
 Vue.component(FormItem.name, FormItem);
 Vue.component(Select.name, Select);
 Vue.component(Option.name, Option);
+Vue.component(Row.name, Row);
+Vue.component(Col.name, Col);
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 

@@ -8,6 +8,7 @@
     text-color="#BFCBD9"
     active-text-color="#409EFF"
     :collapse="isCollapse"
+    @select="handleSelect"
     router
   >
     <!--<div style="text-align: center;">LOGO</div>-->
@@ -43,6 +44,7 @@ export default {
       menu: menu,
       currentPath: this.$route.path,
       isCollapse: false,
+      screenWidth: document.body.clientWidth
     }
   },
   watch: {
@@ -57,11 +59,28 @@ export default {
     handleClose (key, keyPath) {
       console.log (key, keyPath)
     },
+    handleSelect () {
+      if (this.screenWidth < 767.98) {
+        this.isCollapse = true
+        bus.$emit('cs', true, '测试点击隐藏')
+      } else {
+      }
+    }
   },
   mounted () {
     bus.$on('handleClick', function (e) {
       this.isCollapse = e
     }.bind(this))
+  },
+  created () {
+    console.log(this.screenWidth)
+    if (this.screenWidth < 767.98) {
+      console.log(this.isCollapse)
+      this.isCollapse = true
+    } else {
+      // this.isCollapse = e
+      console.log(this.isCollapse)
+    }
   }
 }
 </script>

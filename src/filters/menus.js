@@ -14,7 +14,7 @@ module.exports = [
     sub: [{
       id: '1-1',
       name: '权限管理',
-      componentName: '/index2'
+      componentName: '/privilege'
     }, {
       id: '1-2',
       name: '系统设置',

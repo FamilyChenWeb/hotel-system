@@ -38,6 +38,7 @@ export default {
     return {
       currentPath: this.$route.name,
       isLog: false,
+      screenWidth: document.body.clientWidth
     }
   },
   methods: {
@@ -46,15 +47,46 @@ export default {
     },
     command () {
       console.log('command')
-    }
+    },
+    titleFunc () {
+      if (this.screenWidth < 767.98) {
+        this.isLog = true
+      } else {
+        this.isLog = false
+      }
+    },
   },
   watch: {
     '$route' (to, from) {
       this.currentPath = to.name;
+    },
+    screenWidth (val) {
+      if (!this.timer) {
+        this.screenWidth = val
+        this.timer = true
+        const that = this
+        setTimeout(function () {
+          that.screenWidth = that.$store.state.canvasWidth
+        }, 500)
+      }
     }
   },
   mounted () {
-    console.log(this.$route.matched.filter(item => item.name))
+    this.titleFunc()
+    const that = this
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth
+        that.screenWidth = window.screenWidth
+        if (that.screenWidth < 767.98) {
+          that.isLog = false
+          that.handleClick()
+        } else {
+          that.isLog = true
+          that.handleClick()
+        }
+      })()
+    }
   }
 }
 </script>
