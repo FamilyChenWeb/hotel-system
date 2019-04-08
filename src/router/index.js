@@ -4,6 +4,7 @@ import Login from '@/views/login/login'
 import err from '@/views/404'
 import Home from '@/views/home'
 import Administrators from '@/views/privilege/administrators'
+import Role from '@/views/privilege/role'
 
 import Index from '@/views/index'
 import index1 from '@/views/index1'
@@ -45,6 +46,11 @@ export default new Router({
           path: '/administrators',
           component: Administrators,
           name: '管理员'
+        },
+        {
+          path: '/role',
+          component: Role,
+          name: '角色'
         },
         {
           path: '/index1',

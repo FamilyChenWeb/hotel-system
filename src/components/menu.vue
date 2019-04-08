@@ -97,7 +97,4 @@ export default {
   .el-submenu__title i {
     color: @viceMenuBgIcon;
   }
-  .el-menu-item:hover {
-    background-color: @viceMenuBgHover !important;
-  }
 </style>

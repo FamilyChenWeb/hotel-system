@@ -37,6 +37,7 @@ import {
   Option,
   Row,
   Col,
+  Checkbox,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -66,6 +67,7 @@ Vue.component(Select.name, Select);
 Vue.component(Option.name, Option);
 Vue.component(Row.name, Row);
 Vue.component(Col.name, Col);
+Vue.component(Checkbox.name, Checkbox);
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 

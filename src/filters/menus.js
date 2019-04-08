@@ -26,7 +26,7 @@ module.exports = [
           {
             id: '1-1-2',
             name: '角色',
-            componentName: '/index1'
+            componentName: '/role'
           },
           {
             id: '1-1-3',

@@ -72,13 +72,13 @@ export default {
     padding: 15px;
   }
   .onOff {
-    position: fixed;
+    position: absolute;
     left: 64px;
     right: 0;
     transition: left .25s linear;
   }
   .onOff1 {
-    position: fixed;
+    position: absolute;
     left: 200px;
     right: 0;
     transition: left .25s linear;

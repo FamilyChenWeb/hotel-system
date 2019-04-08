@@ -1,6 +1,6 @@
 <template>
   <div class="administrators">
-    <el-row :xs="4" :gutter="20">
+    <el-row :gutter="20">
       <el-col :sm="6" :xs="24">
         <div class="administrators_search">
           <span>登录名</span>
