@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Login from '@/views/login/login'
 import err from '@/views/404'
 import Home from '@/views/home'
-import Privilege from '@/views/privilege/privilege'
+import Administrators from '@/views/privilege/administrators'
 
 import Index from '@/views/index'
 import index1 from '@/views/index1'
@@ -42,9 +42,9 @@ export default new Router({
           name: '首页'
         },
         {
-          path: '/privilege',
-          component: Privilege,
-          name: '权限管理'
+          path: '/administrators',
+          component: Administrators,
+          name: '管理员'
         },
         {
           path: '/index1',

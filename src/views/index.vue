@@ -6,14 +6,14 @@
         <Menu></Menu>
       </el-aside>
     </el-scrollbar>
-    <el-scrollbar :class="isCollapse ? 'onOff' : 'onOff1'">
+    <el-container :class="isCollapse ? 'onOff' : 'onOff1'">
       <el-header>
         <Head></Head>
       </el-header>
       <el-main>
         <router-view />
       </el-main>
-    </el-scrollbar>
+    </el-container>
   </el-container>
 </template>
 

@@ -25,7 +25,7 @@
         <el-menu-item v-if="typeof item1.shield == 'undefined'" :index="item1.componentName" v-for="(item1, index1) in item.sub" :key="item1.id">
           {{item1.name}}
         </el-menu-item>
-        <el-submenu v-else index="1-4">
+        <el-submenu v-else :index="item1.id">
           <template slot="title">{{item1.name}}</template>
           <el-menu-item v-for="(item2, index2) in item1.grandson" :index="item2.componentName" :key="item2.id">{{item2.name}}</el-menu-item>
         </el-submenu>
@@ -96,9 +96,6 @@ export default {
   }
   .el-submenu__title i {
     color: @viceMenuBgIcon;
-  }
-  .el-menu-item {
-    background-color: @viceMenuBg !important;
   }
   .el-menu-item:hover {
     background-color: @viceMenuBgHover !important;
