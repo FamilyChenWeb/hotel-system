@@ -2,7 +2,10 @@
   <el-container>
     <el-scrollbar>
       <el-aside>
-        <!--<el-aside :class="isCollapse ? 'onOff' : 'onOff1'">-->
+        <div class="logo">
+          <img src="../assets/logo.png" />
+          <h1 v-show="!isCollapse">智慧酒店</h1>
+        </div>
         <Menu></Menu>
       </el-aside>
     </el-scrollbar>
@@ -82,5 +85,17 @@ export default {
     left: 200px;
     right: 0;
     transition: left .25s linear;
+  }
+  .logo {
+    color: #fff;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
   }
 </style>
