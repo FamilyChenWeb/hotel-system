@@ -15,7 +15,6 @@ module.exports = [
       {
         id: '1-1',
         name: '权限管理',
-        componentName: '/administrators',
         shield: 'true',
         grandson: [
           {
@@ -43,7 +42,14 @@ module.exports = [
       {
         id: '1-2',
         name: '系统设置',
-        componentName: '/index1'
+        shield: 'true',
+        grandson: [
+          {
+            id: '1-2-1',
+            name: '网站设置',
+            componentName: '/websiteSetup',
+          }
+        ]
       }
     ]
   },
@@ -99,7 +105,6 @@ module.exports = [
       {
         id: '3-5',
         name: '会员分类',
-        componentName: '/index1',
         shield: 'true',
         grandson: [
           {

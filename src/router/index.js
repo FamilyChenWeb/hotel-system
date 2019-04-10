@@ -5,6 +5,7 @@ import err from '@/views/404'
 import Home from '@/views/home'
 import Administrators from '@/views/privilege/administrators'
 import Role from '@/views/privilege/role'
+import WebsiteSetup from '@/views/systemSetup/websiteSetup'
 
 import Index from '@/views/index'
 import index1 from '@/views/index1'
@@ -51,6 +52,11 @@ export default new Router({
           path: '/role',
           component: Role,
           name: '角色'
+        },
+        {
+          path: '/websiteSetup',
+          component: WebsiteSetup,
+          name: '网站设置'
         },
         {
           path: '/index1',

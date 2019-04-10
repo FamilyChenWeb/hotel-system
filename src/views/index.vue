@@ -2,7 +2,7 @@
   <el-container>
     <el-scrollbar>
       <el-aside>
-        <div class="logo">
+        <div class="i_cursor logo">
           <img src="../assets/logo.png" />
           <h1 v-show="!isCollapse">智慧酒店</h1>
         </div>

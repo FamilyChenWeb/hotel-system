@@ -5,14 +5,14 @@ import * as types from '../store/types'
 import router from '../router/index'
 
 let base = Api.base;
-axios.defaults.baseURL = process.env.API_HOST;
+// axios.defaults.baseURL = process.env.API_HOST;
 // axios.defaults.withCredentials = true;
 
 axios.interceptors.request.use(
   config => {
-    if (store.state.token) {
+    /*if (store.state.token) {
       config.headers.Authorization = `token ${store.state.token}`;
-    }
+    }*/
     return config
   },
   err => {
@@ -50,19 +50,12 @@ export const postRequest = (url, params) => {
     method: 'post',
     url: `${base}${url}`,
     data: params,
-    /*transformRequest: [function (data) {
-      console.log(data)
-      let ret = ''
-      for (let it in data) {
-        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-      }
-      return data
-    }],*/
     headers: {
       // 'Content-Type': 'application/x-www-form-urlencoded',
       // 'Content-Type': 'application/json',
       'Content-Type': 'application/json;charset=UTF-8',
-      'token': Token,
+      'X-Requested-With': 'XMLHttpRequest',
+      // 'token': Token,
     }
   });
 }
@@ -74,8 +67,8 @@ export const getRequest = (url) => {
     url: `${base}${url}`,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      // 'Content-Type': 'application/json',
-      'token': Token
+      'X-Requested-With': 'XMLHttpRequest',
+      // 'token': Token
     }
   });
 }

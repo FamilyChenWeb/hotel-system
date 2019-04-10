@@ -5,7 +5,7 @@
         <img src="../assets/logo.png" />
         <span>LOGO</span>
       </div>-->
-      <div @click="handleClick" :class="isLog ? 'guan' : 'open'">
+      <div @click="handleClick" :class="isLog ? 'i_cursor guan' : 'i_cursor open'">
         <i class="el-icon-more"></i>
       </div>
       <el-breadcrumb separator="/">

@@ -76,6 +76,7 @@
 </template>
 
 <script>
+import { getBase } from '../api/api'
 export default {
   name: "home",
   data () {
@@ -149,7 +150,9 @@ export default {
     }
   },
   mounted () {
-
+    this.$postRequest( getBase, {}).then(res => {
+      console.log(res)
+    })
   }
 }
 </script>

@@ -149,6 +149,7 @@ export default {
       span {
         margin-right: 10px;
         width: 100px;
+        text-align: right;
       }
     }
   }
